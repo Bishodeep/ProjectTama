@@ -1,0 +1,79 @@
+﻿@model IEnumerable<ProjectTAMA.Models.HotelDesViewModel>
+
+<p>
+    @Html.ActionLink("Create New", "HotelCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HotelName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HotelDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HotelPlace)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HotelRating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HotelImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BedImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BedImage1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BedImage2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Standard)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HotelName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HotelDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HotelPlace)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HotelRating)
+        </td>
+        <td>
+            <img src="@Url.Content("~/PlaceImages/"+@item.HotelImage)" height="40" weidth="40" />
+            @Html.DisplayFor(modelItem => item.HotelImage)
+        </td>
+        <td>
+            <img src="@Url.Content("~/PlaceImages/"+@item.BedImage)" height="40" weidth="40" />
+            @Html.DisplayFor(modelItem => item.BedImage)
+        </td>
+        <td>
+            <img src="@Url.Content("~/PlaceImages/"+@item.BedImage1)" height="40" weidth="40" />
+            @Html.DisplayFor(modelItem => item.BedImage1)
+        </td>
+        <td>
+            <img src="@Url.Content("~/PlaceImages/"+@item.BedImage2)" height="40" weidth="40" />
+            @Html.DisplayFor(modelItem => item.BedImage2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Standard)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+            
+           @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+        </td>
+    </tr>
+}
+
+</table>

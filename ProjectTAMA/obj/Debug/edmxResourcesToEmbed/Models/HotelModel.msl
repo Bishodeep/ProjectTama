@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HotelInfoDatabaseModel1StoreContainer" CdmEntityContainer="HotelInfoDatabaseEntities1">
+    <EntitySetMapping Name="HotelTables">
+      <EntityTypeMapping TypeName="HotelInfoDatabaseModel1.HotelTable">
+        <MappingFragment StoreEntitySet="HotelTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="HotelName" ColumnName="HotelName" />
+          <ScalarProperty Name="HotelDescription" ColumnName="HotelDescription" />
+          <ScalarProperty Name="HotelPlace" ColumnName="HotelPlace" />
+          <ScalarProperty Name="HotelRating" ColumnName="HotelRating" />
+          <ScalarProperty Name="HotelImage" ColumnName="HotelImage" />
+          <ScalarProperty Name="BedImage" ColumnName="BedImage" />
+          <ScalarProperty Name="BedImage1" ColumnName="BedImage1" />
+          <ScalarProperty Name="BedImage2" ColumnName="BedImage2" />
+          <ScalarProperty Name="Standard" ColumnName="Standard" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

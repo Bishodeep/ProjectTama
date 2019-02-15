@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HotelInfoDatabaseModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="HotelTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HotelName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="HotelDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HotelPlace" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="HotelRating" Type="Int32" />
+    <Property Name="HotelImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BedImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BedImage1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BedImage2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Standard" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="HotelInfoDatabaseEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="HotelTables" EntityType="Self.HotelTable" />
+  </EntityContainer>
+</Schema>

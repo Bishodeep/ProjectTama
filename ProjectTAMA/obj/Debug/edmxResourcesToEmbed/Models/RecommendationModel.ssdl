@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PlacesInfoDatabaseModel2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Annapurna_Tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Country" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Visitors" Type="bigint" Nullable="false" />
+    <Property Name="TotalVisitors" Type="bigint" Nullable="false" />
+    <Property Name="PercentageVisitors" Type="decimal" Precision="5" Scale="5" />
+    <Property Name="Place" Type="varchar" MaxLength="1" />
+    <Property Name="PlaceName" Type="varchar" MaxLength="1" />
+    <Property Name="Place_Name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Everest_Tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Country" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Visitors" Type="bigint" />
+    <Property Name="TotalVisitors" Type="bigint" />
+    <Property Name="PercentageVisitors" Type="decimal" Precision="5" Scale="5" />
+    <Property Name="Place" Type="varchar" MaxLength="1" />
+    <Property Name="Place_Name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Pashupatinath_Tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Country" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Visitors" Type="bigint" Nullable="false" />
+    <Property Name="TotalVisitors" Type="bigint" Nullable="false" />
+    <Property Name="PercentageVisitors" Type="decimal" Precision="5" Scale="5" />
+    <Property Name="Place" Type="varchar" MaxLength="1" />
+    <Property Name="Place_Name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="PlaceDescriptionTable">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PlaceName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PlaceDescription" Type="nvarchar(max)" />
+    <Property Name="Difficulty" Type="int" />
+    <Property Name="TimeOfVisit" Type="nvarchar(max)" />
+    <Property Name="HotelsAvailable" Type="int" />
+  </EntityType>
+  <EntityType Name="PlaceTable">
+    <Key>
+      <PropertyRef Name="PlaceID" />
+    </Key>
+    <Property Name="PlaceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PlaceName" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="PlaceDescription" Type="nvarchar(max)" />
+    <Property Name="PlaceImage" Type="image" />
+  </EntityType>
+  <EntityType Name="Tbl_Lumbini">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Country" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Visitors" Type="bigint" />
+    <Property Name="TotalVisitor" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PercentageVisitor" Type="bigint" />
+  </EntityType>
+  <EntityContainer Name="PlacesInfoDatabaseModel2StoreContainer">
+    <EntitySet Name="Annapurna_Tbl" EntityType="Self.Annapurna_Tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Everest_Tbl" EntityType="Self.Everest_Tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pashupatinath_Tbl" EntityType="Self.Pashupatinath_Tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlaceDescriptionTable" EntityType="Self.PlaceDescriptionTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlaceTable" EntityType="Self.PlaceTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Lumbini" EntityType="Self.Tbl_Lumbini" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

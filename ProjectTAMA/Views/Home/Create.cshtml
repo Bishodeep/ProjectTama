@@ -1,0 +1,68 @@
+﻿@model ProjectTAMA.Models.PlaceDescriptionViewModel
+
+@{
+    ViewBag.Title = "Create";
+   
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm("Create", "Home", FormMethod.Post, new { enctype = "multipart/form-data" })) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>PlaceDescriptionViewModel</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.PlaceName )
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.PlaceName)
+                @Html.ValidationMessageFor(model => model.PlaceName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PlaceDescription)
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.PlaceDescription)
+                @Html.ValidationMessageFor(model => model.PlaceDescription)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Difficulty)
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Difficulty)
+                @Html.ValidationMessageFor(model => model.Difficulty)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TimeOfVisit)
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.TimeOfVisit,new { Type = "file" })
+                @Html.ValidationMessageFor(model => model.TimeOfVisit)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HotelsAvailable)
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.HotelsAvailable)
+                @Html.ValidationMessageFor(model => model.HotelsAvailable)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Admin")
+</div>

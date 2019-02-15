@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PlacesInfoDatabaseModel2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Annapurna_Tbl">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Country" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Visitors" Type="bigint" Nullable="false" />
+          <Property Name="TotalVisitors" Type="bigint" Nullable="false" />
+          <Property Name="PercentageVisitors" Type="decimal" Precision="5" Scale="5" />
+          <Property Name="Place" Type="varchar" MaxLength="1" />
+          <Property Name="PlaceName" Type="varchar" MaxLength="1" />
+          <Property Name="Place_Name" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Everest_Tbl">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Country" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Visitors" Type="bigint" />
+          <Property Name="TotalVisitors" Type="bigint" />
+          <Property Name="PercentageVisitors" Type="decimal" Precision="5" Scale="5" />
+          <Property Name="Place" Type="varchar" MaxLength="1" />
+          <Property Name="Place_Name" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Pashupatinath_Tbl">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Country" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Visitors" Type="bigint" Nullable="false" />
+          <Property Name="TotalVisitors" Type="bigint" Nullable="false" />
+          <Property Name="PercentageVisitors" Type="decimal" Precision="5" Scale="5" />
+          <Property Name="Place" Type="varchar" MaxLength="1" />
+          <Property Name="Place_Name" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="PlaceDescriptionTable">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PlaceName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="PlaceDescription" Type="nvarchar(max)" />
+          <Property Name="Difficulty" Type="int" />
+          <Property Name="TimeOfVisit" Type="nvarchar(max)" />
+          <Property Name="HotelsAvailable" Type="int" />
+        </EntityType>
+        <EntityType Name="PlaceTable">
+          <Key>
+            <PropertyRef Name="PlaceID" />
+          </Key>
+          <Property Name="PlaceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PlaceName" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="PlaceDescription" Type="nvarchar(max)" />
+          <Property Name="PlaceImage" Type="image" />
+        </EntityType>
+        <EntityType Name="Tbl_Lumbini">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Country" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Visitors" Type="bigint" />
+          <Property Name="TotalVisitor" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="PercentageVisitor" Type="bigint" />
+        </EntityType>
+        <EntityContainer Name="PlacesInfoDatabaseModel2StoreContainer">
+          <EntitySet Name="Annapurna_Tbl" EntityType="Self.Annapurna_Tbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Everest_Tbl" EntityType="Self.Everest_Tbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pashupatinath_Tbl" EntityType="Self.Pashupatinath_Tbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PlaceDescriptionTable" EntityType="Self.PlaceDescriptionTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PlaceTable" EntityType="Self.PlaceTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Lumbini" EntityType="Self.Tbl_Lumbini" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PlacesInfoDatabaseModel2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Annapurna_Tbl">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Visitors" Type="Int64" Nullable="false" />
+          <Property Name="TotalVisitors" Type="Int64" Nullable="false" />
+          <Property Name="PercentageVisitors" Type="Decimal" Precision="5" Scale="5" />
+          <Property Name="Place" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="PlaceName" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Place_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Everest_Tbl">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Visitors" Type="Int64" />
+          <Property Name="TotalVisitors" Type="Int64" />
+          <Property Name="PercentageVisitors" Type="Decimal" Precision="5" Scale="5" />
+          <Property Name="Place" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Place_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Pashupatinath_Tbl">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Visitors" Type="Int64" Nullable="false" />
+          <Property Name="TotalVisitors" Type="Int64" Nullable="false" />
+          <Property Name="PercentageVisitors" Type="Decimal" Precision="5" Scale="5" />
+          <Property Name="Place" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Place_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PlaceDescriptionTable">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PlaceName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PlaceDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Difficulty" Type="Int32" />
+          <Property Name="TimeOfVisit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HotelsAvailable" Type="Int32" />
+        </EntityType>
+        <EntityType Name="PlaceTable">
+          <Key>
+            <PropertyRef Name="PlaceID" />
+          </Key>
+          <Property Name="PlaceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PlaceName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="PlaceDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PlaceImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Tbl_Lumbini">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Visitors" Type="Int64" />
+          <Property Name="TotalVisitor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PercentageVisitor" Type="Int64" />
+        </EntityType>
+        <EntityContainer Name="PlacesInfoDatabaseEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Annapurna_Tbl" EntityType="Self.Annapurna_Tbl" />
+          <EntitySet Name="Everest_Tbl" EntityType="Self.Everest_Tbl" />
+          <EntitySet Name="Pashupatinath_Tbl" EntityType="Self.Pashupatinath_Tbl" />
+          <EntitySet Name="PlaceDescriptionTables" EntityType="Self.PlaceDescriptionTable" />
+          <EntitySet Name="PlaceTables" EntityType="Self.PlaceTable" />
+          <EntitySet Name="Tbl_Lumbini" EntityType="Self.Tbl_Lumbini" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PlacesInfoDatabaseModel2StoreContainer" CdmEntityContainer="PlacesInfoDatabaseEntities2">
+          <EntitySetMapping Name="Annapurna_Tbl">
+            <EntityTypeMapping TypeName="PlacesInfoDatabaseModel2.Annapurna_Tbl">
+              <MappingFragment StoreEntitySet="Annapurna_Tbl">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Visitors" ColumnName="Visitors" />
+                <ScalarProperty Name="TotalVisitors" ColumnName="TotalVisitors" />
+                <ScalarProperty Name="PercentageVisitors" ColumnName="PercentageVisitors" />
+                <ScalarProperty Name="Place" ColumnName="Place" />
+                <ScalarProperty Name="PlaceName" ColumnName="PlaceName" />
+                <ScalarProperty Name="Place_Name" ColumnName="Place_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Everest_Tbl">
+            <EntityTypeMapping TypeName="PlacesInfoDatabaseModel2.Everest_Tbl">
+              <MappingFragment StoreEntitySet="Everest_Tbl">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Visitors" ColumnName="Visitors" />
+                <ScalarProperty Name="TotalVisitors" ColumnName="TotalVisitors" />
+                <ScalarProperty Name="PercentageVisitors" ColumnName="PercentageVisitors" />
+                <ScalarProperty Name="Place" ColumnName="Place" />
+                <ScalarProperty Name="Place_Name" ColumnName="Place_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pashupatinath_Tbl">
+            <EntityTypeMapping TypeName="PlacesInfoDatabaseModel2.Pashupatinath_Tbl">
+              <MappingFragment StoreEntitySet="Pashupatinath_Tbl">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Visitors" ColumnName="Visitors" />
+                <ScalarProperty Name="TotalVisitors" ColumnName="TotalVisitors" />
+                <ScalarProperty Name="PercentageVisitors" ColumnName="PercentageVisitors" />
+                <ScalarProperty Name="Place" ColumnName="Place" />
+                <ScalarProperty Name="Place_Name" ColumnName="Place_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PlaceDescriptionTables">
+            <EntityTypeMapping TypeName="PlacesInfoDatabaseModel2.PlaceDescriptionTable">
+              <MappingFragment StoreEntitySet="PlaceDescriptionTable">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PlaceName" ColumnName="PlaceName" />
+                <ScalarProperty Name="PlaceDescription" ColumnName="PlaceDescription" />
+                <ScalarProperty Name="Difficulty" ColumnName="Difficulty" />
+                <ScalarProperty Name="TimeOfVisit" ColumnName="TimeOfVisit" />
+                <ScalarProperty Name="HotelsAvailable" ColumnName="HotelsAvailable" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PlaceTables">
+            <EntityTypeMapping TypeName="PlacesInfoDatabaseModel2.PlaceTable">
+              <MappingFragment StoreEntitySet="PlaceTable">
+                <ScalarProperty Name="PlaceID" ColumnName="PlaceID" />
+                <ScalarProperty Name="PlaceName" ColumnName="PlaceName" />
+                <ScalarProperty Name="PlaceDescription" ColumnName="PlaceDescription" />
+                <ScalarProperty Name="PlaceImage" ColumnName="PlaceImage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Lumbini">
+            <EntityTypeMapping TypeName="PlacesInfoDatabaseModel2.Tbl_Lumbini">
+              <MappingFragment StoreEntitySet="Tbl_Lumbini">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Visitors" ColumnName="Visitors" />
+                <ScalarProperty Name="TotalVisitor" ColumnName="TotalVisitor" />
+                <ScalarProperty Name="PercentageVisitor" ColumnName="PercentageVisitor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

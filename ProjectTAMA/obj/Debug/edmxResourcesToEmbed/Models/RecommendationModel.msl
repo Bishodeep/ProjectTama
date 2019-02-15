@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PlacesInfoDatabaseModel2StoreContainer" CdmEntityContainer="PlacesInfoDatabaseEntities2">
+    <EntitySetMapping Name="Annapurna_Tbl">
+      <EntityTypeMapping TypeName="PlacesInfoDatabaseModel2.Annapurna_Tbl">
+        <MappingFragment StoreEntitySet="Annapurna_Tbl">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Visitors" ColumnName="Visitors" />
+          <ScalarProperty Name="TotalVisitors" ColumnName="TotalVisitors" />
+          <ScalarProperty Name="PercentageVisitors" ColumnName="PercentageVisitors" />
+          <ScalarProperty Name="Place" ColumnName="Place" />
+          <ScalarProperty Name="PlaceName" ColumnName="PlaceName" />
+          <ScalarProperty Name="Place_Name" ColumnName="Place_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Everest_Tbl">
+      <EntityTypeMapping TypeName="PlacesInfoDatabaseModel2.Everest_Tbl">
+        <MappingFragment StoreEntitySet="Everest_Tbl">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Visitors" ColumnName="Visitors" />
+          <ScalarProperty Name="TotalVisitors" ColumnName="TotalVisitors" />
+          <ScalarProperty Name="PercentageVisitors" ColumnName="PercentageVisitors" />
+          <ScalarProperty Name="Place" ColumnName="Place" />
+          <ScalarProperty Name="Place_Name" ColumnName="Place_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pashupatinath_Tbl">
+      <EntityTypeMapping TypeName="PlacesInfoDatabaseModel2.Pashupatinath_Tbl">
+        <MappingFragment StoreEntitySet="Pashupatinath_Tbl">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Visitors" ColumnName="Visitors" />
+          <ScalarProperty Name="TotalVisitors" ColumnName="TotalVisitors" />
+          <ScalarProperty Name="PercentageVisitors" ColumnName="PercentageVisitors" />
+          <ScalarProperty Name="Place" ColumnName="Place" />
+          <ScalarProperty Name="Place_Name" ColumnName="Place_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlaceDescriptionTables">
+      <EntityTypeMapping TypeName="PlacesInfoDatabaseModel2.PlaceDescriptionTable">
+        <MappingFragment StoreEntitySet="PlaceDescriptionTable">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PlaceName" ColumnName="PlaceName" />
+          <ScalarProperty Name="PlaceDescription" ColumnName="PlaceDescription" />
+          <ScalarProperty Name="Difficulty" ColumnName="Difficulty" />
+          <ScalarProperty Name="TimeOfVisit" ColumnName="TimeOfVisit" />
+          <ScalarProperty Name="HotelsAvailable" ColumnName="HotelsAvailable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlaceTables">
+      <EntityTypeMapping TypeName="PlacesInfoDatabaseModel2.PlaceTable">
+        <MappingFragment StoreEntitySet="PlaceTable">
+          <ScalarProperty Name="PlaceID" ColumnName="PlaceID" />
+          <ScalarProperty Name="PlaceName" ColumnName="PlaceName" />
+          <ScalarProperty Name="PlaceDescription" ColumnName="PlaceDescription" />
+          <ScalarProperty Name="PlaceImage" ColumnName="PlaceImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Lumbini">
+      <EntityTypeMapping TypeName="PlacesInfoDatabaseModel2.Tbl_Lumbini">
+        <MappingFragment StoreEntitySet="Tbl_Lumbini">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Visitors" ColumnName="Visitors" />
+          <ScalarProperty Name="TotalVisitor" ColumnName="TotalVisitor" />
+          <ScalarProperty Name="PercentageVisitor" ColumnName="PercentageVisitor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

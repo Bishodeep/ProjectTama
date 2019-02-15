@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PlacesInfoDatabaseModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="PlaceDescriptionTable">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PlaceName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PlaceDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Difficulty" Type="Int32" />
+    <Property Name="TimeOfVisit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HotelsAvailable" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="PlacesInfoDatabaseEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="PlaceDescriptionTables" EntityType="Self.PlaceDescriptionTable" />
+  </EntityContainer>
+</Schema>

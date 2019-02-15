@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PlacesInfoDatabaseModelStoreContainer" CdmEntityContainer="PlacesInfoDatabaseEntities">
+    <EntitySetMapping Name="PlaceTables">
+      <EntityTypeMapping TypeName="PlacesInfoDatabaseModel.PlaceTable">
+        <MappingFragment StoreEntitySet="PlaceTable">
+          <ScalarProperty Name="PlaceID" ColumnName="PlaceID" />
+          <ScalarProperty Name="PlaceName" ColumnName="PlaceName" />
+          <ScalarProperty Name="PlaceDescription" ColumnName="PlaceDescription" />
+          <ScalarProperty Name="PlaceImage" ColumnName="PlaceImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

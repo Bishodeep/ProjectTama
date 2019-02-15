@@ -1,0 +1,92 @@
+﻿@model ProjectTAMA.Models.HotelTable
+
+@using (Html.BeginForm( "HotelCreate","Home" ,FormMethod.Post, new { enctype = "multipart/form-data" }) ) 
+{
+    @Html.AntiForgeryToken()
+    
+  <div class="form-horizontal">
+    <h4>HotelTable</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.HotelName)
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.HotelName)
+            @Html.ValidationMessageFor(model => model.HotelName)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.HotelDescription)
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.HotelDescription)
+            @Html.ValidationMessageFor(model => model.HotelDescription)
+        </div>
+    </div>
+</div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.HotelPlace)
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.HotelPlace)
+            @Html.ValidationMessageFor(model => model.HotelPlace)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.HotelRating)
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.HotelRating)
+            @Html.ValidationMessageFor(model => model.HotelRating)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.HotelImage)
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.HotelImage, new { Type = "file" })
+            @Html.ValidationMessageFor(model => model.HotelImage)
+        </div>
+
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.BedImage)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.BedImage ,new { Type = "file" })
+                    @Html.ValidationMessageFor(model => model.BedImage)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.BedImage1)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.BedImage1, new { Type = "file" })
+                    @Html.ValidationMessageFor(model => model.BedImage1)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.BedImage2)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.BedImage2, new { Type = "file" })
+                    @Html.ValidationMessageFor(model => model.BedImage2)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Standard)
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Standard)
+                    @Html.ValidationMessageFor(model => model.Standard)
+                </div>
+            </div>*@
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+    }
+    }
+    <div>
+        @Html.ActionLink("Back to List", "Admin")
+    </div>

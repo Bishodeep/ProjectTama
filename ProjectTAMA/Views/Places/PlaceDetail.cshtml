@@ -1,0 +1,81 @@
+﻿@model ProjectTAMA.Models.PlaceDescriptionViewModel
+
+
+
+<div class="colorlib-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wrap-division">
+                            <div class="col-md-12 col-md-offset-0 heading2 animate-box">
+                                <h2>@Model.PlaceName</h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 animate-box">
+                                    <div class="room-wrap">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6">
+
+                                                @*<div class="room-img" style="background-image: url(PlaceImages/Annapurna.jpeg);"></div>*@
+                                                <img src="~/PlaceImages/@Model.TimeOfVisit"  height="400" width="420">
+
+                                            </div>
+                                            <div class="col-md-6 col-sm-6">
+                                                <div class="desc">
+                                                    <h2>Place Detail</h2>
+                                                    @*<p class="price"><span>$45</span> <small>/ night</small></p>*@
+                                                    <p>@Model.PlaceDescription</p>
+                                                    <p><a href="#" class="btn btn-primary">View Map</a></p>
+
+                                                    <h3>Number of hotels: @Model.HotelsAvailable</h3>
+                                                    <!--side Bar-->
+                                                    <div class="col-md-3">
+                                                        <div class="sidebar-wrap">
+                                                            <div class="side animate-box">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <h3 class="sidebar-heading">Difficulty Level</h3>
+                                                                        <form method="post" class="colorlib-form-2">
+                                                                            @if (Model.Difficulty == 1)
+                            {
+                                                <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></span> </p>
+}
+                                                                            @if (Model.Difficulty == 2)
+                            {
+                                                <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></span> </p>
+}
+                                                                            @if (Model.Difficulty == 3)
+                            {
+                                                <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></span></p>
+}
+                                                                            @if (Model.Difficulty == 4)
+                            {
+                                                <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-empty"></i></span> </p>
+}
+                                                                            @if (Model.Difficulty == 5)
+                            {
+                                                <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> </p>
+}
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

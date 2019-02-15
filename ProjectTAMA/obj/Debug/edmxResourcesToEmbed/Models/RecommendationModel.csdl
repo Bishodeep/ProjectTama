@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PlacesInfoDatabaseModel2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Annapurna_Tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Visitors" Type="Int64" Nullable="false" />
+    <Property Name="TotalVisitors" Type="Int64" Nullable="false" />
+    <Property Name="PercentageVisitors" Type="Decimal" Precision="5" Scale="5" />
+    <Property Name="Place" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PlaceName" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Place_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Everest_Tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Visitors" Type="Int64" />
+    <Property Name="TotalVisitors" Type="Int64" />
+    <Property Name="PercentageVisitors" Type="Decimal" Precision="5" Scale="5" />
+    <Property Name="Place" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Place_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Pashupatinath_Tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Visitors" Type="Int64" Nullable="false" />
+    <Property Name="TotalVisitors" Type="Int64" Nullable="false" />
+    <Property Name="PercentageVisitors" Type="Decimal" Precision="5" Scale="5" />
+    <Property Name="Place" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Place_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PlaceDescriptionTable">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PlaceName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PlaceDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Difficulty" Type="Int32" />
+    <Property Name="TimeOfVisit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HotelsAvailable" Type="Int32" />
+  </EntityType>
+  <EntityType Name="PlaceTable">
+    <Key>
+      <PropertyRef Name="PlaceID" />
+    </Key>
+    <Property Name="PlaceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PlaceName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="PlaceDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PlaceImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Tbl_Lumbini">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Visitors" Type="Int64" />
+    <Property Name="TotalVisitor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PercentageVisitor" Type="Int64" />
+  </EntityType>
+  <EntityContainer Name="PlacesInfoDatabaseEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Annapurna_Tbl" EntityType="Self.Annapurna_Tbl" />
+    <EntitySet Name="Everest_Tbl" EntityType="Self.Everest_Tbl" />
+    <EntitySet Name="Pashupatinath_Tbl" EntityType="Self.Pashupatinath_Tbl" />
+    <EntitySet Name="PlaceDescriptionTables" EntityType="Self.PlaceDescriptionTable" />
+    <EntitySet Name="PlaceTables" EntityType="Self.PlaceTable" />
+    <EntitySet Name="Tbl_Lumbini" EntityType="Self.Tbl_Lumbini" />
+  </EntityContainer>
+</Schema>

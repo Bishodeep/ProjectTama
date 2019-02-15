@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ProjectTAMA.Models.PlaceTable>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PlaceName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlaceDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlaceImage)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlaceName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlaceDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlaceImage)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PlaceID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PlaceID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PlaceID })
+        </td>
+    </tr>
+}
+
+</table>

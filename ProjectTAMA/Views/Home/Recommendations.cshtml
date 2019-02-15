@@ -1,0 +1,12 @@
+﻿@model IEnumerable<ProjectTAMA.Models.IntermediateRecommendation>
+
+
+@foreach(var item in Model)
+{
+    <tr>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.recommendedPlaces);
+        </td>
+    </tr>
+}
